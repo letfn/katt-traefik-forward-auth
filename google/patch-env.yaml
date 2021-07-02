@@ -1,23 +1,35 @@
 - op: replace
   path: /spec/template/spec/containers/0/env
   value:
-    - name: DOMAIN
-      valueFrom:
-        secretKeyRef:
-          key: secret
-          name: traefik-forward-auth
     - name: SECRET
       valueFrom:
         secretKeyRef:
           key: secret
-          name: traefik-forward-auth
-    - name: PROVIDERS_GOOGLE_CLIENT_ID
+          name: traefik-forward-auth-secret
+    - name: CLIENT_SECRET
       valueFrom:
         secretKeyRef:
           key: secret
-          name: traefik-forward-auth
-    - name: PROVIDERS_GOOGLE_CLIENT_SECRET
+          name: traefik-forward-auth-client-secret
+    - name: CLIENT_ID
       valueFrom:
         secretKeyRef:
           key: secret
-          name: traefik-forward-auth
+          name: traefik-forward-auth-client-id
+    - name: COOKIE_SECURE
+      value: 'true'
+    - name: COOKIE_DOMAINS
+      valueFrom:
+        secretKeyRef:
+          key: secret
+          name: traefik-forward-auth-domains
+    - name: DOMAINS
+      valueFrom:
+        secretKeyRef:
+          key: secret
+          name: traefik-forward-auth-domains
+    - name: AUTH_HOST
+      valueFrom:
+        secretKeyRef:
+          key: secret
+          name: traefik-forward-auth-auth-host
