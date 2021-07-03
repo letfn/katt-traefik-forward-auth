@@ -4,32 +4,32 @@
     - name: SECRET
       valueFrom:
         secretKeyRef:
-          key: secret
+          key: SECRET
           name: traefik-forward-auth-secret
     - name: CLIENT_SECRET
       valueFrom:
         secretKeyRef:
-          key: secret
+          key: CLIENT_SECRET
           name: traefik-forward-auth-client-secret
     - name: CLIENT_ID
       valueFrom:
         secretKeyRef:
-          key: secret
+          key: CLIENT_ID
           name: traefik-forward-auth-client-id
     - name: COOKIE_DOMAINS
       valueFrom:
         secretKeyRef:
-          key: secret
+          key: COOKIE_DOMAINS
           name: traefik-forward-auth-cookie-domains
     - name: DOMAINS
       valueFrom:
         secretKeyRef:
-          key: secret
+          key: DOMAINS
           name: traefik-forward-auth-domains
     - name: AUTH_HOST
       valueFrom:
         secretKeyRef:
-          key: secret
+          key: AUTH_HOST
           name: traefik-forward-auth-auth-host
     - name: COOKIE_SECURE
       value: 'true'
