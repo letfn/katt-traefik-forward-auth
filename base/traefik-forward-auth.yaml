@@ -73,6 +73,8 @@ spec:
             secretKeyRef:
               key: secret
               name: traefik-forward-auth
+        args:
+        - --match-whitelist-or-domain
         image: thomseddon/traefik-forward-auth:2.2.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
