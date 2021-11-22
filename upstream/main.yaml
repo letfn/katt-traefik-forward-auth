@@ -24,7 +24,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
 type: Opaque
 data:
-  secret: "d0U4RFVqT1VVSUNsWWpsTw=="
+  secret: "R21Xc1ZpNGFxVGNrQXREaQ=="
 ---
 # Source: traefik-forward-auth/templates/service.yaml
 apiVersion: v1
